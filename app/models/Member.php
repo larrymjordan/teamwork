@@ -4,11 +4,13 @@ class Member extends \Eloquent {
 
 	// Add your validation rules here
 	public static $rules = [
-		// 'title' => 'required'
+		'name'     => 'required',
+    'lastname' => 'required',
+    'email'    => 'required|email'
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = ['name', 'lastname', 'email'];
 
   public function tasks(){
     return $this->hasMany('Task');
