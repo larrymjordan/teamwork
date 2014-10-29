@@ -19,6 +19,13 @@ a.item{
   background: #37474f;
 }
 
+p.information {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 21px;
+  color: #d6b602;
+}
+
 .logo {
   padding-top: 10px;
   width:  95px !important;
@@ -68,9 +75,96 @@ p {
   padding-top: 40px;
 }
 
+.create-container {
+  background-color: #333333;
+  margin-top: -9px;
+  padding-top: 20px;
+  padding-left: 27px;
+  text-align: right;
+}
+
 .emphasis a{
   color: #ffffff;
   font-weight: bold;
+}
+
+.button {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.form-title {
+  text-align: left;
+  font-size: 25px;
+  padding-bottom: 0;
+}
+
+input[type="submit"] {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+* > .members-wrapper{
+  background-color: #333333;
+  margin-top: -6px;
+  padding-top: 12px;
+  padding-bottom: 50px;
+}
+
+.button {
+  margin: 6px 0;
+}
+
+* > .member-container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted gray;
+}
+
+.member-email {
+  color: #42ACE2;
+  font-size: 14px;
+  display: inline-block;
+  padding-right: 10px;
+  font-weight: 100;
+}
+
+img.avatar {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.member-info {
+  display: inline-block;
+}
+
+.member-tasks {
+  color: #777777;
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.member-name {
+  color:#ffffff;
+  font-size: 16px;
+}
+
+.label-left {
+  text-align: left;
+  color:#777777;
 }
 
 .footer {
@@ -84,4 +178,9 @@ p {
   padding-bottom: 5px;
   color: gray;
   background: rgba(0,0,0,0.35);
+}
+
+.button.tiny {
+  padding-right: 0.95rem;
+  padding-left: 0.95rem;
 }

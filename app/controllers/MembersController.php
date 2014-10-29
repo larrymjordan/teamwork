@@ -10,8 +10,12 @@ class MembersController extends \BaseController {
 	public function index()
 	{
 		$members = Member::all();
+		$flash = array(
+			'label' => Lang::get('general.add_member_label'),
+			'url'   => URL::route('members.create')
+		);
 
-		return View::make('members.index', compact('members'));
+		return View::make('members.index', compact('members','flash'));
 	}
 
 	/**
