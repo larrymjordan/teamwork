@@ -184,3 +184,9 @@ img.avatar {
   padding-right: 0.95rem;
   padding-left: 0.95rem;
 }
+
+.title-task {
+  color: #ffffff;
+  font-size: 12px;
+  margin-left: -50px;
+}
