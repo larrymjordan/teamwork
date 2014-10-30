@@ -25,7 +25,11 @@ class TasksController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('tasks.create');
+		$members = Member::select('id', DB::raw('concat(name, " ", lastName) AS fullName'))
+    ->orderBy('name')
+    ->lists('fullName', 'id');
+
+		return View::make('tasks.create', compact('members'));
 	}
 
 	/**
