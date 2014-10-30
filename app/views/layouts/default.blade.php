@@ -12,7 +12,7 @@
 
 <body>
   <div class="icon-bar seven-up">
-    <a class="item" href="#">
+    <a class="item" href="{{ URL::to('/') }}">
       {{ HTML::image('images/logo.png', 'Teamwork logo', array('class' => 'logo')) }}
     </a>
     <a class="item" href="{{ URL::route('members.index') }}">
