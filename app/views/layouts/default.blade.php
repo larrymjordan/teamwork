@@ -19,7 +19,7 @@
       <i class="fi-torsos-all size-48"></i>
       <label>{{ Lang::get('general.team_members') }}</label>
     </a>
-    <a class="item">
+    <a class="item" href="{{ URL::route('tasks.index') }}">
       <i class="fi-clipboard-notes size-48"></i>
       <label>{{ Lang::get('general.tasks') }}</label>
     </a>
@@ -28,6 +28,13 @@
       <a class="item" href="{{ $flash['url'] }}">
         <i class="fi-plus size-48"></i>
         <label>{{ $flash['label'] }}</label>
+      </a>
+    <?php endif; ?>
+
+    <?php if(isset($flashTask)): ?>
+      <a class="item" href="{{ $flashTask['url'] }}">
+        <i class="fi-plus size-48"></i>
+        <label>{{ $flashTask['label'] }}</label>
       </a>
     <?php endif; ?>
   </div>

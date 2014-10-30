@@ -17,3 +17,4 @@ Route::get('/', function()
 });
 
 Route::resource('members', 'MembersController');
+Route::resource('tasks', 'TasksController');

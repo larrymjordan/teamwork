@@ -10,8 +10,12 @@ class TasksController extends \BaseController {
 	public function index()
 	{
 		$tasks = Task::all();
+		$flashTask = array(
+			'label' => Lang::get('general.add_task_label'),
+			'url'   => URL::route('tasks.create')
+		);
 
-		return View::make('tasks.index', compact('tasks'));
+		return View::make('tasks.index', compact('tasks','flashTask'));
 	}
 
 	/**

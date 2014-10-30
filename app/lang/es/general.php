@@ -15,6 +15,7 @@
   "create_member_title"       => "¿Quieres ser miembro del equipo?",
   "create_member_information" => "Completa el siguiente formulario con tus datos para registrarte y de forma instantanea estaras habilitado para ser parte del equipo.",
   'add_member_label'          => "Agregar miembro",
+  'add_task_label'          => "Agregar Tarea",
   'edit_label'                => "Editar",
   'remove_label'              => "Remover",
   'assign_task_label'         => "Tareas asignadas",
