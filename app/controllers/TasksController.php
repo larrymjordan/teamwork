@@ -60,7 +60,7 @@ class TasksController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$task = Task::findOrFail($id);
+		$task = Task::findOrFail($id);		
 
 		return View::make('tasks.show', compact('task'));
 	}
@@ -74,8 +74,11 @@ class TasksController extends \BaseController {
 	public function edit($id)
 	{
 		$task = Task::find($id);
+		$members = Member::select('id', DB::raw('concat(name, " ", lastName) AS fullName'))
+    ->orderBy('name')
+    ->lists('fullName', 'id');
 
-		return View::make('tasks.edit', compact('task'));
+		return View::make('tasks.edit', compact('task','members'));
 	}
 
 	/**
