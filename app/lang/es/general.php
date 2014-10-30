@@ -21,5 +21,14 @@
   'edit_label'                 => "Editar",
   'remove_label'               => "Remover",
   'assign_task_label'          => "Tareas asignadas",
-  'complete_task_label'        => "Tareas completadas"
+  'complete_task_label'        => "Tareas completadas",
+  'create_task_title'          => "¿Listo para crear tus tareas?",
+  'create_task_information'    => "En este espacio puedes crear tus tareas y asignarlas a un miembro de tu equipo que inmediatamente sera notificado e informado al respecto. Revisa en la lista de tareas quienes estan haciendo que actividad.",
+  'create_task_title_label'    => "Titulo",
+  'create_task_description'    => "Descripcion",
+  'create_task_owner'          => "Responsable",
+  'create_task_hours'          => "Horas",
+  'create_task_start_date'     => "Fecha inicio",
+  'create_task_end_date'       => "Fecha fin"
+
  );

@@ -9,8 +9,8 @@
           <div class="member-info">
             {{ HTML::linkAction('members.show',$member->name . ' ' . $member->lastname,[$member->id],['class'=>'member-name']) }}<br>
             <span class="member-email">{{ $member->email }}</span>
-            <span class="member-tasks">{{Lang::get('general.assign_task_label')}}:   &nbsp;   {{$member->tasks->count()}}</span>
-            <span class="member-tasks">{{Lang::get('general.complete_task_label')}}: &nbsp;   {{$member->tasks->count()}}</span>
+            <span class="member-tasks">{{Lang::get('general.assign_task_label')}}:   &nbsp;   {{$member->tasks()->count()}}</span>
+            <span class="member-tasks">{{Lang::get('general.complete_task_label')}}: &nbsp;   {{$member->completedTasks()->count()}}</span>
           </div>
         </div>
         <div class="columns large-1">
