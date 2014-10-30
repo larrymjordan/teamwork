@@ -11,12 +11,12 @@ class TasksController extends \BaseController {
 	{
 		$tasksIncompleted = Task::where('completed','=','0')->orderBy('end_date','desc')->get();
 		$tasksCompleted = Task::where('completed','=','1')->orderBy('end_date','desc')->get();
-		$flashTask = array(
+		$flash = array(
 			'label' => Lang::get('general.add_task_label'),
 			'url'   => URL::route('tasks.create')
 		);
 
-		return View::make('tasks.index', compact('tasksIncompleted', 'tasksCompleted','flashTask'));
+		return View::make('tasks.index', compact('tasksIncompleted', 'tasksCompleted','flash'));
 	}
 
 	/**
@@ -60,7 +60,7 @@ class TasksController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$task = Task::findOrFail($id);		
+		$task = Task::findOrFail($id);
 
 		return View::make('tasks.show', compact('task'));
 	}

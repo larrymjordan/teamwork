@@ -30,13 +30,6 @@
         <label>{{ $flash['label'] }}</label>
       </a>
     <?php endif; ?>
-
-    <?php if(isset($flashTask)): ?>
-      <a class="item" href="{{ $flashTask['url'] }}">
-        <i class="fi-plus size-48"></i>
-        <label>{{ $flashTask['label'] }}</label>
-      </a>
-    <?php endif; ?>
   </div>
 
   @yield('content')
