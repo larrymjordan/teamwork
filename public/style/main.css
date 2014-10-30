@@ -167,8 +167,12 @@ img.avatar {
   color:#777777;
 }
 
+.create-task-container{
+  margin-bottom: 100px;
+}
+
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   text-align: right;
