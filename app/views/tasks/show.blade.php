@@ -1,1 +1,8 @@
-/var/www/html/teamwork/app/views/tasks/show.blade.php
+@extends('layouts.default')
+@section('content')
+  <h1>
+    {{{ $task->title }}}
+  </h1>
+
+  {{{ $task->description }}}
+@stop

@@ -137,6 +137,17 @@ input[type="text"] {
   font-weight: 100;
 }
 
+.task-info-container{
+  list-style: none;
+  margin: 0;
+}
+
+.task-owner {
+  text-decoration: none;
+  color: #42ACE2;
+  font-size: 14px;
+}
+
 img.avatar {
   display: inline-block;
   width: 48px;
@@ -167,8 +178,30 @@ img.avatar {
   color:#777777;
 }
 
+.create-task-container{
+  margin-bottom: 100px;
+}
+
+.small-date {
+  margin-left: 10px;
+  color: #777777;
+}
+
+.small-text{
+  font-size: 11px;
+  color: #777777;
+}
+
+.small-task-info{
+  font-size: 11px;
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #777777;
+}
+
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   text-align: right;
@@ -183,4 +216,10 @@ img.avatar {
 .button.tiny {
   padding-right: 0.95rem;
   padding-left: 0.95rem;
+}
+
+.title-task {
+  color: #ffffff;
+  font-size: 14px;
+  margin-left: -50px;
 }

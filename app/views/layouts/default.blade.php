@@ -12,14 +12,14 @@
 
 <body>
   <div class="icon-bar seven-up">
-    <a class="item" href="#">
+    <a class="item" href="{{ URL::to('/') }}">
       {{ HTML::image('images/logo.png', 'Teamwork logo', array('class' => 'logo')) }}
     </a>
     <a class="item" href="{{ URL::route('members.index') }}">
       <i class="fi-torsos-all size-48"></i>
       <label>{{ Lang::get('general.team_members') }}</label>
     </a>
-    <a class="item">
+    <a class="item" href="{{ URL::route('tasks.index') }}">
       <i class="fi-clipboard-notes size-48"></i>
       <label>{{ Lang::get('general.tasks') }}</label>
     </a>

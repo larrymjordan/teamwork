@@ -16,4 +16,10 @@ class Member extends \Eloquent {
     return $this->hasMany('Task');
   }
 
+  public function completedTasks() {
+    return $this->tasks->filter(function($task) {
+      return $task->completed;
+    });
+  }
+
 }

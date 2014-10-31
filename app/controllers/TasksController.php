@@ -9,9 +9,14 @@ class TasksController extends \BaseController {
 	 */
 	public function index()
 	{
-		$tasks = Task::all();
+		$tasksIncompleted = Task::where('completed','=','0')->orderBy('end_date','asc')->get();
+		$tasksCompleted = Task::where('completed','=','1')->orderBy('end_date','desc')->get();
+		$flash = array(
+			'label' => Lang::get('general.add_task_label'),
+			'url'   => URL::route('tasks.create')
+		);
 
-		return View::make('tasks.index', compact('tasks'));
+		return View::make('tasks.index', compact('tasksIncompleted', 'tasksCompleted','flash'));
 	}
 
 	/**
@@ -21,7 +26,11 @@ class TasksController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('tasks.create');
+		$members = Member::select('id', DB::raw('concat(name, " ", lastName) AS fullName'))
+    ->orderBy('name')
+    ->lists('fullName', 'id');
+
+		return View::make('tasks.create', compact('members'));
 	}
 
 	/**
@@ -65,8 +74,11 @@ class TasksController extends \BaseController {
 	public function edit($id)
 	{
 		$task = Task::find($id);
+		$members = Member::select('id', DB::raw('concat(name, " ", lastName) AS fullName'))
+    ->orderBy('name')
+    ->lists('fullName', 'id');
 
-		return View::make('tasks.edit', compact('task'));
+		return View::make('tasks.edit', compact('task','members'));
 	}
 
 	/**
