@@ -17,11 +17,11 @@
 			</div>
 		</div>
 		<div class="columns large-1">
-			{{ HTML::linkAction('tasks.edit','Edit',[$task->id],['class'=>'button tiny']) }}
+			{{ HTML::linkAction('tasks.edit','Editar',[$task->id],['class'=>'button tiny']) }}
 		</div>
 		<div class="columns large-1">
 			{{ Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'DELETE' ]) }}
-			{{ Form::button('Destroy', ['type' => 'submit', 'class' => 'tiny alert button'])}}
+			{{ Form::button('Remover', ['type' => 'submit', 'class' => 'tiny alert button'])}}
 			{{ Form::close() }}
 		</div>
 	</div>

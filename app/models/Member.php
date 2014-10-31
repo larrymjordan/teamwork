@@ -22,4 +22,14 @@ class Member extends \Eloquent {
     });
   }
 
+  public static function boot() {
+        parent::boot();
+
+        // cause a delete of a product to cascade to children so they are also deleted
+        static::deleted(function($member)
+        {
+            $member->tasks()->delete();
+        });
+    }
+
 }

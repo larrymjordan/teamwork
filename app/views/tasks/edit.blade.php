@@ -3,12 +3,12 @@
 <div class="row create-task-container">
  <div class="columns large-6 large-centered create-container">
   <h1 class="form-title">Actualiza la información de las tareas</h1>
-  <p class="information">Cambia el dato que quieras de tu tarea en la casilla correspondiente, también 
+  <p class="information">Cambia el dato que quieras de tu tarea en la casilla correspondiente, también
   puedes finalizar tu tarea.</p>
     {{ Form::model($task, array('route' => ['tasks.update', $task->id], 'method' => 'PUT') ) }}
 
-      <div>{{ Form::label('completed', 'Completed', array('class'=>'label-left')) }}      
-      {{ Form::hidden('completed'); }}
+      <div>{{ Form::label('completed', 'Completed', array('class'=>'label-left')) }}
+      {{ Form::hidden('completed',0); }}
       {{ Form::checkbox('completed') }}</div>
       {{ $errors->first('completed','<small class="error">:message</small>') }}
 
@@ -40,5 +40,5 @@
 
     {{ Form::close() }}
   </div>
-</div>  
+</div>
 @stop
