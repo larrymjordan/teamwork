@@ -9,7 +9,7 @@ class TasksController extends \BaseController {
 	 */
 	public function index()
 	{
-		$tasksIncompleted = Task::where('completed','=','0')->orderBy('end_date','desc')->get();
+		$tasksIncompleted = Task::where('completed','=','0')->orderBy('end_date','asc')->get();
 		$tasksCompleted = Task::where('completed','=','1')->orderBy('end_date','desc')->get();
 		$flash = array(
 			'label' => Lang::get('general.add_task_label'),

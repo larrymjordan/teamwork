@@ -7,7 +7,8 @@
   puedes finalizar tu tarea.</p>
     {{ Form::model($task, array('route' => ['tasks.update', $task->id], 'method' => 'PUT') ) }}
 
-      <div>{{ Form::label('completed', 'Completed', array('class'=>'label-left')) }}
+      <div>{{ Form::label('completed', 'Completed', array('class'=>'label-left')) }}      
+      {{ Form::hidden('completed'); }}
       {{ Form::checkbox('completed') }}</div>
       {{ $errors->first('completed','<small class="error">:message</small>') }}
 
